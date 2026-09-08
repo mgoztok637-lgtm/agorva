@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AGORVA — Almadan önce karşılaştır.</title>
+<meta name="description" content="AGORVA, işletmelerin doğru ürünü doğru tedarikçiden bulmasına yardımcı olur. Teklifleri karşılaştırın, numuneyi deneyin, doğru tedarikçiyi seçin.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1f3b;--purple:#7138e8;--orange:#f97316;--bg:#f7f8fc;--text:#15233a;--muted:#66758a;--line:#e6ebf2;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:27px;font-weight:800;letter-spacing:-1.7px;color:var(--navy)}.logo .r{color:var(--orange)}
+nav{display:flex;gap:25px;align-items:center;color:#536176;font-size:13px;font-weight:700}.nav-cta{background:var(--navy);color:#fff;padding:11px 17px;border-radius:10px}
+.hero{padding:86px 0 72px;background:linear-gradient(135deg,#fff 0%,#f8f5ff 60%,#fff 100%)}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:62px;align-items:center}.eyebrow{display:inline-flex;background:#fff2e9;color:#c2410c;border:1px solid #fed7aa;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800}
+h1{font-size:clamp(43px,6vw,70px);line-height:1.02;letter-spacing:-3.2px;margin:20px 0 18px;color:var(--navy)}h1 em{font-style:normal;color:var(--purple)}
+.hero p{font-size:17px;color:#56657a;max-width:630px;margin:0 0 27px}.hero p strong{color:var(--navy)}
+.buttons{display:flex;gap:11px;flex-wrap:wrap}.btn{display:inline-block;padding:14px 19px;border-radius:11px;font-weight:800;font-size:13px}.btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 25px rgba(249,115,22,.18)}.btn-secondary{background:#fff;border:1px solid #d9e0e9;color:var(--navy)}
+.free-note{font-size:11px;color:#7a8798;margin-top:10px}
+.visual{background:var(--navy);border-radius:28px;padding:25px;box-shadow:0 25px 60px rgba(11,31,59,.18)}.visual-top{display:flex;justify-content:space-between;color:#fff;align-items:center;margin-bottom:20px}.mini-logo{font-size:17px;font-weight:800}.live{font-size:11px}.dot{width:8px;height:8px;border-radius:50%;background:var(--orange);display:inline-block;margin-right:7px}
+.product{background:#fff;border-radius:13px;padding:13px 15px;margin-bottom:10px}.product-title{font-size:12px;font-weight:800;color:var(--navy);margin-bottom:10px}.offer{border:1px solid #e9edf3;border-radius:10px;padding:11px 12px;margin:7px 0}.offer-row{display:flex;justify-content:space-between;gap:12px;align-items:center}.supplier{font-size:11px;font-weight:700}.details{font-size:9px;color:#64748b;margin-top:2px}.price{font-size:12px;font-weight:800;color:var(--purple)}.sample{font-size:9px;background:#fff3eb;color:#c2410c;border-radius:6px;padding:4px 6px;margin-top:6px;display:inline-block;font-weight:700}
+.section{padding:82px 0}.section-white{background:#fff}.section-head{text-align:center;max-width:720px;margin:0 auto 42px}.section-head h2{font-size:36px;line-height:1.15;letter-spacing:-1.5px;margin:0 0 12px;color:var(--navy)}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}.icon{width:43px;height:43px;border-radius:12px;background:#f1ecff;color:var(--purple);display:grid;place-items:center;font-size:19px;margin-bottom:17px}.card h3{font-size:15px;margin:0 0 7px;color:var(--navy)}.card p{font-size:12px;color:var(--muted);margin:0}
+.audience{display:grid;grid-template-columns:1fr 1fr;gap:18px}.aud{border-radius:20px;padding:29px;border:1px solid var(--line);background:#fff}.aud.supplier{background:#faf7ff}.aud .label{font-size:11px;font-weight:800;color:var(--orange);text-transform:uppercase;letter-spacing:.5px}.aud h3{font-size:23px;color:var(--navy);margin:8px 0}.aud p{font-size:13px;color:var(--muted);margin:0 0 17px}.aud a{font-size:12px;font-weight:800;color:var(--purple)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{background:var(--bg);padding:21px;border-radius:16px}.num{font-size:11px;font-weight:800;color:var(--orange);margin-bottom:17px}.step h3{font-size:14px;margin:0 0 7px}.step p{font-size:11px;color:var(--muted);margin:0}
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center}.story-box{background:var(--navy);color:#fff;border-radius:24px;padding:34px}.story-box h3{font-size:24px;line-height:1.25;margin:0 0 12px}.story-box p{color:#cbd5e1;margin:0;font-size:13px}.story-copy h2{font-size:36px;line-height:1.15;color:var(--navy);letter-spacing:-1.5px}.story-copy p{color:var(--muted);font-size:14px}
+.contact{background:var(--navy);color:#fff;border-radius:26px;padding:43px;display:flex;justify-content:space-between;align-items:center;gap:30px}.contact h2{font-size:31px;margin:0 0 7px}.contact p{color:#cbd5e1;margin:0;font-size:13px}.contact .btn{background:var(--orange);color:#fff}
+footer{padding:30px 0;background:#07172d;color:#94a3b8;font-size:11px}.footer-flex{display:flex;justify-content:space-between;gap:20px}.footer-logo{color:#fff;font-weight:800;font-size:20px;margin-bottom:2px}
+@media(max-width:850px){.hero-grid,.story{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr 1fr}nav a:not(.nav-cta){display:none}}
+@media(max-width:520px){.cards,.steps,.audience{grid-template-columns:1fr}.hero{padding-top:60px}h1{letter-spacing:-2px}.contact{padding:29px;display:block}.contact .btn{margin-top:20px}.footer-flex{display:block}.footer-flex>div:last-child{margin-top:12px}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="logo" href="#">AGO<span class="r">R</span>VA</a><nav><a href="#neden">Neden AGORVA?</a><a href="#nasil">Nasıl çalışır?</a><a class="nav-cta" href="#basla">İhtiyacımı Bildir</a></nav></div></header>
+
+<main>
+<section class="hero"><div class="container hero-grid"><div>
+<span class="eyebrow">İŞLETMELER İÇİN YENİ NESİL TEDARİK</span>
+<h1>Almadan önce <em>karşılaştır.</em></h1>
+<p>İşletmenizin ihtiyacı olan ürünü, <strong>doğru fiyat ve kaliteyle</strong> bulmasına yardımcı oluyoruz. Alternatif tedarikçilerden teklif alın, karşılaştırın ve <strong>toplu sipariş vermeden önce numuneyi deneyin.</strong></p>
+<div class="buttons"><a class="btn btn-primary" href="#basla">İHTİYACIMI BİLDİR →</a><a class="btn btn-secondary" href="#nasil">Nasıl çalışıyor?</a></div>
+<div class="free-note">✓ İşletmeler için ücretsiz ihtiyaç bildirimi</div>
+</div>
+<div class="visual"><div class="visual-top"><div class="mini-logo">AGORVA</div><div class="live"><span class="dot"></span>Teklif karşılaştırma</div></div>
+<div class="product"><div class="product-title">Z KATLAMA HAVLU · 1 KOLİ</div>
+<div class="offer"><div class="offer-row"><div><div class="supplier">Tedarikçi A</div><div class="details">40'lı paket · 2 kat · 1.000 adet</div><span class="sample">Numune mevcut</span></div><div class="price">150 TL</div></div></div>
+<div class="offer"><div class="offer-row"><div><div class="supplier">Tedarikçi B</div><div class="details">30'lu paket · 3 kat · 900 adet</div><span class="sample">Numune mevcut</span></div><div class="price">200 TL</div></div></div>
+<div class="offer"><div class="offer-row"><div><div class="supplier">Tedarikçi C</div><div class="details">40'lı paket · 2 kat · hızlı teslimat</div><span class="sample">Numune mevcut</span></div><div class="price">175 TL</div></div></div>
+</div></div></div></section>
+
+<section id="neden" class="section section-white"><div class="container"><div class="section-head"><h2>Sadece ucuzu değil,<br>doğru seçeneği bulun.</h2><p>Bir ürünün fiyatı tek başına gerçek maliyeti anlatmaz. AGORVA, işletmenizin ihtiyacına uygunluğu da karşılaştırmanın içine dahil eder.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">⚖</div><h3>Fiyat + Kalite</h3><p>Fiyatı; miktar, teknik özellik, kalite ve teslimatla birlikte değerlendirin.</p></div>
+<div class="card"><div class="icon">📦</div><h3>Önce Numune</h3><p>Toplu sipariş vermeden önce ürünü deneyin ve işletmenizde test edin.</p></div>
+<div class="card"><div class="icon">🔎</div><h3>Alternatif Tedarikçiler</h3><p>Tek bir tedarikçiye bağlı kalmadan farklı seçenekleri görün.</p></div>
+<div class="card"><div class="icon">★</div><h3>Gerçek Deneyim</h3><p>Gerçekleşen alışverişlerden oluşan işletme deneyimlerini dikkate alın.</p></div>
+</div></div></section>
+
+<section class="section"><div class="container"><div class="section-head"><h2>AGORVA'da iki taraf da kazanır.</h2><p>İşletmeler ihtiyaçlarını daha iyi seçeneklerle karşılar; tedarikçiler gerçek satın alma taleplerine ulaşır.</p></div>
+<div class="audience"><div class="aud"><div class="label">İŞLETMEYİM</div><h3>İhtiyacımı daha iyi fiyata bulmak istiyorum.</h3><p>Aradığınız ürünü ve özelliklerini bildirin. Alternatif tedarikçileri karşılaştırın, numuneyi deneyin, kararınızı verin.</p><a href="#basla">İhtiyacımı Bildir →</a></div>
+<div class="aud supplier"><div class="label">TEDARİKÇİYİM</div><h3>Yeni işletmelere ulaşmak istiyorum.</h3><p>Ürünlerinizi ve tekliflerinizi, gerçekten satın alma ihtiyacı olan işletmelerle buluşturun.</p><a href="#basla">Tedarikçi Ol →</a></div></div>
+</div></section>
+
+<section id="nasil" class="section section-white"><div class="container"><div class="section-head"><h2>Nasıl çalışır?</h2><p>İhtiyacınızı söyleyin; gerisini AGORVA ile birlikte çözün.</p></div>
+<div class="steps">
+<div class="step"><div class="num">01</div><h3>İhtiyacını bildir</h3><p>Ürünü, miktarı ve özellikleri bize ilet.</p></div>
+<div class="step"><div class="num">02</div><h3>Teklifleri topla</h3><p>Uygun tedarikçilerden alternatif teklifler.</p></div>
+<div class="step"><div class="num">03</div><h3>Karşılaştır</h3><p>Fiyat, kalite, miktar ve teslimatı birlikte değerlendir.</p></div>
+<div class="step"><div class="num">04</div><h3>Numuneyi dene</h3><p>Toplu alımdan önce ürünü işletmende test et.</p></div>
+<div class="step"><div class="num">05</div><h3>Sipariş ver</h3><p>Memnunsan doğru tedarikçiyle devam et.</p></div>
+</div></div></section>
+
+<section class="section section-white"><div class="container story"><div class="story-box"><h3>Bir ürünün ucuz olması, iyi bir teklif olduğu anlamına gelmez.</h3><p>AGORVA'nın amacı işletmelerin yalnızca fiyatı değil, aldığı ürünün gerçek değerini görmesine yardımcı olmak.</p></div>
+<div class="story-copy"><h2>Doğru ürünü, doğru tedarikçiyle buluşturuyoruz.</h2><p>İşletmelerin düzenli satın aldığı ürünlerde alternatif tedarikçileri buluyor, teklifleri karşılaştırıyor ve toplu alımdan önce numune ile karar vermeyi kolaylaştırıyoruz.</p></div></div></section>
+
+<section id="basla" class="section"><div class="container"><div class="contact"><div><h2>Bir ihtiyacınız mı var?</h2><p>Ürününü ve ihtiyacını bize bildir. Alternatif tedarikçileri birlikte değerlendirelim.</p></div><a class="btn" href="mailto:info@agorva.com.tr?subject=AGORVA%20-%20İhtiyacımı%20Bildirmek%20İstiyorum">İHTİYACIMI BİLDİR →</a></div></div></section>
+</main>
+<footer><div class="container footer-flex"><div><div class="footer-logo">AGORVA</div><div>Almadan önce karşılaştır.</div></div><div>info@agorva.com.tr · agorva.com.tr</div></div></footer>
+</body></html>
